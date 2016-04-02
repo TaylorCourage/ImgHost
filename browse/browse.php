@@ -10,19 +10,23 @@ echo '<body>';
 echo '<div align="center">';
 echo '<h1>Meme Machine</h1>';
 
-$dir = "../uploads";
-$fileType = array(
+$dir = "../uploads";   // Directory for file uploads
+$fileType = array(   // Types of files that are thumbnail'd
 	'jpg',
 	'jpeg',
 	'png',
 	'gif'
 );
-$servername = "localhost";
-$username = "root";
-$password = "Flamingh0m()";
-$dbname = "memes";
+
+// MySQL server connection info
+$servername = "db_address";
+$username = "db_username";
+$password = "db_password";
+$dbname = "db_name";
+
 $count = 0;
 
+//Connect to MySQL
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 
 if (!$conn) {
@@ -30,7 +34,8 @@ if (!$conn) {
 } else {
 }
 
-if(isset($_POST["browse"])) {
+
+if(isset($_POST["browse"]) && $var) {  // If "Browse" is pressed
 	echo '<h2>Category: ' . $_POST["memeCategory"] . '</h2>';
 	$memeCategory = mysqli_real_escape_string($conn, $_POST["memeCategory"]);
 	$browse = "SELECT * FROM memes WHERE category = \"$memeCategory\"";
@@ -51,7 +56,7 @@ if(isset($_POST["browse"])) {
         <a href="./">Back</a>
         <?php
 	}
-} else {
+} else {  // If 'Browse All' is pressed
 	echo '<h2>Category: all</h2>';
 	$browse = "SELECT * FROM memes";
 	$result = mysqli_query($conn, $browse);	
@@ -60,7 +65,7 @@ if(isset($_POST["browse"])) {
 		while($row = mysqli_fetch_assoc($result)) {
 			$count++;
 			echo '<img src="' . $dir . '/' . $row["fileName"] . '" alt="' . $row["name"] . '" />';
-			if ($count == 3) {
+			if ($count == 3) {  // Change this number based on how many pictures across you want on the page
 				echo '<br />';
 			}
 		}
