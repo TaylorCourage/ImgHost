@@ -1,6 +1,6 @@
 # Meme Machine
 
-## Current Version: v0.2 BETA
+## Current Version: v0.3.0-beta
 
 ## Overview
 
@@ -16,7 +16,7 @@ Users are then able to browse the memes using the categories, and in future vers
 
 ## Changelog
 
-### v0.3.0 BETA - April 4, 2016
+### v0.3.0-beta - April 4, 2016
 
 	- Added "Search" function
 	- More categories added
