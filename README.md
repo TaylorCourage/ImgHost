@@ -16,6 +16,11 @@ Users are then able to browse the memes using the categories, and in future vers
 
 ## Changelog
 
+### v0.3.0 BETA - April 4, 2016
+
+	- Added "Search" function
+	- More categories added
+
 ### v0.2 BETA - April 2, 2016
 
 	- Second release
