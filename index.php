@@ -118,8 +118,7 @@
 					</tr>
 					<tr>
 					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="member" />Member-Specific</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="thefuck" />The Fuck You Say?</td>
+						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="spongebob" />Spongebob</td>
 					
 					</tr>
 				
@@ -141,6 +140,6 @@
 			<br />
 			<br />
 			<br />
-			<h6>Meme Machine v0.2.0 BETA</h6>
+			<h6>Meme Machine v0.3.0 BETA</h6>
 		</div>
 </html>

@@ -1,13 +1,9 @@
 <?php
+include './credentials.php';
 $target_dir = "uploads/";
 $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 $uploadOk = 1;
 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-
-$servername = "db_address";
-$username = "db_username";
-$password = "db_password";
-$dbname = "db_name";
 
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 

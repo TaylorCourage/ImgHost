@@ -12,8 +12,8 @@
 	<h2>Search by name</h2>
 	<form action="query.php" method="post">
 	
-		Search: <input type="text" name="term" value="Search disabled" disabled/>
-		<input type="submit" name="submit" value="Search" disabled/>
+		<input type="text" name="term" />
+		<input type="submit" name="search" value="Search" />
 	
 	</form>
 
@@ -130,6 +130,14 @@
 					
 						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="member" />Member-Specific</td>
 						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="thefuck" />The Fuck You Say?</td>
+						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="laughing" />Laugh/Laughing</td>
+						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="racist" />Racist</td>
+						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="spiderman" />Spiderman</td>
+					
+					</tr>
+					<tr>
+					
+						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="spongebob" />Spongebob</td>
 					
 					</tr>
 				

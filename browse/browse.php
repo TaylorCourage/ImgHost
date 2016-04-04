@@ -1,4 +1,5 @@
 <?php
+include '../credentials.php';
 
 //Setting up the webpage
 echo '<html>';
@@ -19,10 +20,6 @@ $fileType = array(   // Types of files that are thumbnail'd
 );
 
 // MySQL server connection info
-$servername = "db_address";
-$username = "db_username";
-$password = "db_password";
-$dbname = "db_name";
 
 $count = 0;
 
