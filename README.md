@@ -1,6 +1,6 @@
 # Meme Machine
 
-## Current Version: v0.3.5-beta
+## Current Version: v0.3.6-beta
 
 ## Overview
 
@@ -15,6 +15,11 @@ When a user uploads a meme, they are able to specify a name/description of the m
 Users are then able to browse the memes using the categories, and in future versions will be able to search memes by their name/description.
 
 ## Changelog
+
+### v0.3.6-beta - April 7, 2016
+
+- Fixed critical issue where searches wouldn't work
+- Added fancy new details section on landing page
 
 ### v0.3.5-beta - April 7, 2016
 

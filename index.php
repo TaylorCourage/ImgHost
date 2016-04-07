@@ -1,3 +1,8 @@
+<!--
+     The Meme Machine - An open source image databasing system
+     A project by Taylor Courage (http://taylorcourage.net)
+     Latest Release: v0.3.6-beta (April 7, 2016)
+-->
 <html>
 	<head>
 		<title>Meme Machine</title>
@@ -98,6 +103,6 @@
 			<br />
 			<br />
 			<br />
-			<h6>Meme Machine v0.3.5-beta</h6>
+			<h6>Meme Machine v0.3.6-beta</h6>
 		</div>
 </html>

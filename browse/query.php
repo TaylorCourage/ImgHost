@@ -20,26 +20,22 @@ echo '<h1>Meme Machine</h1>';
 	} else {
 	}
 	
-	$term = $_POST['term'];
+	$words = $_POST['term'];
 	
 	
-	$tokens = explode(' ', $term);
-	$tokens = array_map(
-		function($term) {
-			return mysqli_real_escape_string(trim($term));
-		},
-		$tokens
-	);
+	$parts=explode(" ",trim($words));
+	$clauses=array();
+	foreach ($parts as $part){
+		$clauses[]="'%" . $part . "%'";
+	}
+	$clause .= implode(' OR ' ,$clauses);
 	
-	$sql = "SELECT * FROM memes WHERE name LIKE '$term";
-	$sql .= implode("%' or name LIKE '%", $tokens) . "'";
-
-	if(isset($_POST['search']) && $term){
-		echo "You searched for: " . $term . "<br />";
+	$sql = "SELECT * FROM memes WHERE name LIKE $clause OR category LIKE $clause";
+	if(isset($_POST['search']) && $words){
+		echo "You searched for: " . $words . "<br />";
 		
 		$result = mysqli_query($conn, $sql);	
 		
-		echo $sql;
 		if (mysqli_num_rows($result) > 0) {
 			while($row = mysqli_fetch_assoc($result)) {
 				$count++;
@@ -65,8 +61,8 @@ echo '<h1>Meme Machine</h1>';
 		<a href="./">Back</a>
 		<?php
 	}
-
-
+echo '<br>';
+echo '<a href="./">Back</a>';
 echo '</body>';
 echo '</html>';
 ?>
