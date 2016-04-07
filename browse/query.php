@@ -35,7 +35,7 @@ echo '<h1>Meme Machine</h1>';
 	$sql .= implode("%' or name LIKE '%", $tokens) . "'";
 
 	if(isset($_POST['search']) && $term){
-		echo "Search term is: " . $term . "<br />";
+		echo "You searched for: " . $term . "<br />";
 		
 		$result = mysqli_query($conn, $sql);	
 		

@@ -32,7 +32,7 @@ if (!$conn) {
 }
 
 
-if(isset($_POST["browse"]) && $var) {  // If "Browse" is pressed
+if(isset($_POST["browse"]) && $_POST["memeCategory"]) {  // If "Browse" is pressed
 	echo '<h2>Category: ' . $_POST["memeCategory"] . '</h2>';
 	$memeCategory = mysqli_real_escape_string($conn, $_POST["memeCategory"]);
 	$browse = "SELECT * FROM memes WHERE category = \"$memeCategory\"";

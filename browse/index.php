@@ -25,123 +25,71 @@
 
 <div align="center">
 	<form action="browse.php" method="post">
-				<h4>Browse by category:</h4><table>
-				
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="lolwut" />LOLWUT</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="wtf" />WTF</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="fuckyeah" />Fuck Yeah</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="fuck" />FUCK!</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="alcohol" />Alcohol</td>
-					
-					</tr>				
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="nope" />Nope</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="fuckthis" />Fuck This</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="disgust" />Disgust</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="stfu" />STFU/Shut Up</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="rip" />RIP in piece</td>
-					
-					</tr>				
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="upvote" />Upvote</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="downvote" />Downvote</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="mindblown" />Mind Blown</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="frank" />Filthy Frank</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="insults" />Insults</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="haters" />Haters Gonna Hate</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="didntread" />Didn't Read</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="coolstory" />Cool Story Bro</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="umad" />UMAD BRO?</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="impressed" />Impressed</td>
-					
-					</tr>				
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="dealwithit" />Deal With It</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="animals" />Animals</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="partyhard" />Party Hard</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="hitler" />Hitler/Nazis/Holocaust</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="shocked" />Shocked</td>
-					
-					</tr>				
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="meta" />Meta</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="games" />Games/Gaming</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="fail" />Fail</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="killyourself" />Kill Yourself</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="scary" />Scary</td>
-					
-					</tr>				
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="thinking" />Thinking</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="muslims" />Muslims/Terrorists</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="ricky" />Ricky Comic</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="beashame" />Be a shame if...</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="history" />History</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="military" />Military</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="guns" />Guns</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="infograph" />Inforgraph</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="boners" />Erections/Fapping</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="cats" />Cats</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="joancornella" />Joan Cornella</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="thissucks" />This sucks</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="fuckyou" />Fuck You</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="nsfw" />NSFW</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="misc" />MISC</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="pepe" />Pepe</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="political" />Political</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="sanic" />Sanic</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="cringe" />Cringe</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="morbid" />Morbid</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="polandball" />Poland Ball</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="canada" />Canada</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="murica" />'Murica</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="visser" />Visser</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="fiteme" />Fite me</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="member" />Member-Specific</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="thefuck" />The Fuck You Say?</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="laughing" />Laugh/Laughing</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="racist" />Racist</td>
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="spiderman" />Spiderman</td>
-					
-					</tr>
-					<tr>
-					
-						<td align="center"><input type="radio" name="memeCategory" id="memeCategory" value="spongebob" />Spongebob</td>
-					
-					</tr>
-				
-				</table>
+				<h4>Browse by category:
+				<select name="memeCategory">
+					<option value="" default>-- Choose A Category --</option>
+					<option value="alcohol">Alcohol</option>
+					<option value="animals">Animals</option>
+					<option value="beashame">Be A Shame If...</option>
+					<option value="canada">Canada</option>
+					<option value="cats">Cats</option>
+					<option value="coolstory">Cool Story (Bro)</option>
+					<option value="cringe">Cringe</option>
+					<option value="dealwithit">Deal With It</option>
+					<option value="didntread">Didn't Read</option>
+					<option value="disgust">Disgust</option>
+					<option value="downvote">Downvote</option>
+					<option value="boners">Erections/Fapping</option>
+					<option value="fail">Fail</option>
+					<option value="frank">Filthy Frank</option>
+					<option value="fiteme">Fite Me</option>
+					<option value="fuck">Fuck!</option>
+					<option value="fuckthis">Fuck This</option>
+					<option value="fuckyeah">Fuck Yeah</option>
+					<option value="fuckyou">Fuck You</option>
+					<option value="games">Games/Gaming</option>
+					<option value="guns">Guns</option>
+					<option value="haters">Haters Gonna Hate</option>
+					<option value="history">History</option>
+					<option value="hitler">Hitler/Nazi's/Holocaust</option>
+					<option value="impressed">Impressed</option>
+					<option value="infograph">Infograph</option>
+					<option value="insults">Insults</option>
+					<option value="joancornella">Joan Cornella</option>
+					<option value="killyourself">Kill Yourself</option>
+					<option value="laugh">Laugh/Laughing</option>
+					<option value="lolwut">lolwut</option>
+					<option value="memberspecific">Member-Specific</option>
+					<option value="meta">Meta</option>
+					<option value="military">Military</option>
+					<option value="mindblown">Mind Blown</option>
+					<option value="misc">Misc</option>
+					<option value="morbid">Morbid</option>
+					<option value="murica">'Murica</option>
+					<option value="muslims">Muslims/Terrorists</option>
+					<option value="nope">Nope</option>
+					<option value="nsfw">NSFW</option>
+					<option value="partyhard">Party Hard</option>
+					<option value="pepe">Pepe</option>
+					<option value="pokemon">Pokemon</option>
+					<option value="polandball">Poland Ball</option>
+					<option value="political">Political</option>
+					<option value="racist">Racist</option>
+					<option value="ricky">Ricky Comic</option>
+					<option value="rip">RIP in piece</option>
+					<option value="sanic">Sanic</option>
+					<option value="scary">Scary</option>
+					<option value="shocked">Shocked</option>
+					<option value="spongebob">Spongebob</option>
+					<option value="stfu">STFU/Shut Up</option>
+					<option value="thinking">Thinking</option>
+					<option value="thissucks">This Sucks</option>
+					<option value="umad">UMAD BRO?</option>
+					<option value="upvote">Upvote</option>
+					<option value="visser">Visser</option>
+					<option value="wtf">WTF</option>
+				</select>
+				</h4>
 				<br />
 		<input type="submit" name="browse" value="Browse" />
 		<input type="submit" name="browseAll" value="Browse All" />
