@@ -1,20 +1,45 @@
-# Meme Machine
+# ImgHost
 
-## Current Version: v0.3.6-beta
+## Current Version: v0.4.0-beta
 
 ## Overview
 
-The Meme Machine is a semi-private repository of memes that can be easily searched, indexed, and accessed anywhere at any time. Content is not limited to memes, either. Reaction images and gifs, cancerous stuff, friends/members-related stuff, fails, replies, anything, really. It's mostly here for organization and access. This is the source code.
+ImgHost is a self-hosted image hosting software. Upload your images and share them with the world!
 
 ## Features
 
-Meme Machine is able to take in images up to 75MiB in size, and stores some basic metadata in a SQL database.
+ImgHost is designed to be fully configurable for the ultimate photo sharing experience. User-configurable options range from changing the allowed file size (dependant on your web server), to how files are named and stored, layouts and fonts, to mundane things like table names in your databases.
 
-When a user uploads a meme, they are able to specify a name/description of the meme, as well as a category to help easily organize the memes.
+Many features are planned, so stay tuned!
 
-Users are then able to browse the memes using the categories, and in future versions will be able to search memes by their name/description.
+## Installation
+
+ImgHost is designed to be as plug-and-play as possible. You will need a:
+
+- Webserver, that supports
+- PHP, coupled with
+- MySQL or MariaDB
+
+You will also want to configure your server to allow for larger file uploads.
+
+First you will want to either clone this repo, or download the zip (and unzip it to) a directory that your web server software has full read/write access to. 
+
+Next you need to edit `config/db_config.php` and add your SQL credentials.
+
+If you plan on using a custom domain, you can also edit `config/configuation.php` to include that.
+
+Then you will need to navigate to `http://imghost.local/config/` or your custom domain to finish database and folder setup. Simply change the available options based on your preferences and click `Setup databases`, once complete you will be redirected to the home page where your server should be ready to use!
+
 
 ## Changelog
+
+### v0.4.0-beta - Dec 16, 2023
+
+- Full re-factor to convert the old "Meme Machine" to a general-purpose, plug-and-play image hosting software.
+- Removed categories, removed names. These will come back as configurable options.
+- Added user-configurable CSS for some pizzazz.
+- Added private toggle, to prevent images from being shown in the public gallery.
+- Photos are given a completely random 6-byte ID instead of storing full file names.
 
 ### v0.3.6-beta - April 7, 2016
 

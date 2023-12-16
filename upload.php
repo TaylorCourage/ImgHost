@@ -1,36 +1,47 @@
 <?php
-include './credentials.php';
-$target_dir = "uploads/";
-$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+include './config/db_config.php';
+include './config/configuration.php';
+// Create a random 12-character hex ID number for the pictures
+$randBytes = random_bytes(6);
+$imageID = bin2hex($randBytes);
+
+$uppedFile = basename($_FILES["fileToUpload"]["name"]);
+$isPrivate = 0;
+
+$imageFileType = pathinfo($uppedFile,PATHINFO_EXTENSION);
+$fileName = $imageID . "." . $imageFileType;
+$target_file = $targetDir . $fileName;
+
+$mimeType = $_FILES['fileToUpload']['type'];
+
 $uploadOk = 1;
-$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-$memeDir = mysqli_real_escape_string($conn, basename($_FILES["fileToUpload"]["name"]));
-$memeName = mysqli_real_escape_string($conn, $_POST["memeName"]);
-$memeCategory = mysqli_real_escape_string($conn, $_POST["memeCategory"]);
+$conn = mysqli_connect($sqlServer, $sqlUsername, $sqlPassword, $dbname);
+
+$imageDir = mysqli_real_escape_string($conn, basename($_FILES["fileToUpload"]["name"]));
 
 if (!$conn) {
 	die ("CONNECTION FAIL " .mysqli_connect_error());
-} else {
+} 
+
+// Check if private flag is active
+if (isset($_POST["isPrivate"])) {
+    $isPrivate = 1;
 }
 
-$insert = "INSERT INTO memes (name, category, fileName) VALUES ('$memeName', '$memeCategory', '$memeDir')";
 
-// Check if image file is a actual image or fake image
-if(isset($_POST["submit"])) {
-    $check = getimagesize($_FILES["fileToUpload"]["tmp_name"]);
-    if($check !== false) {
+$insert = "INSERT INTO $tablename (imgID, fileType, mimeType, isPrivate) VALUES ('$imageID', '$imageFileType', '$mimeType', '$isPrivate')";
+
+
+// Check file mimetype to ensure it's actually an image
+if (isset($_POST["submit"])) {
+    if (in_array($mimeType, $supportedFileTypes)){
         $uploadOk = 1;
     } else {
-        echo "File is not an image.";
+        echo "File is not a valid image.";
         $uploadOk = 0;
     }
-}
-if ($memeCategory == '') {
-	$uploadOk = 0;
-	echo "Choose a category";
 }
 
 // Check if file already exists
@@ -40,13 +51,7 @@ if (file_exists($target_file)) {
 }
 // Check file size
 if ($_FILES["fileToUpload"]["size"] > 75000000) {
-    echo "Sorry, your file is too large.";
-    $uploadOk = 0;
-}
-// Allow certain file formats
-if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-&& $imageFileType != "gif" ) {
-    echo "Only JPG, JPEG, PNG & GIF files are allowed.";
+    echo "Sorry, your image is too large (75 MB limit).";
     $uploadOk = 0;
 }
 
@@ -61,7 +66,11 @@ if ($uploadOk == 0) {
 // if everything is ok, try to upload file
 } else {
     if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-        echo "The meme ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+        echo "<p>The image ". $fileName . " has been uploaded.<p><br>";
+        if ($isPrivate != 0) {
+            echo "<p>You have chosen to make this image private - it will not appear in the public gallery.</p>";
+        }
+        echo "<p><a href=" . $targetDir . $fileName .">View image</a></p>";
         ?>
         <p>&nbsp;</p>
         <a href="./">Back</a>
