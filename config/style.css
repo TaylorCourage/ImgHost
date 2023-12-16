@@ -3,9 +3,9 @@
     background: linear-gradient(237deg, #0000ffd2, #1eff009a, #7d00a7);
     background-size: 500% 500%;
 
-    -webkit-animation: AnimationName 45s ease infinite;
-    -moz-animation: AnimationName 45s ease infinite;
-    animation: AnimationName 45s ease infinite;
+    -webkit-animation: AnimationName 90s ease infinite;
+    -moz-animation: AnimationName 90s ease infinite;
+    animation: AnimationName 90s ease infinite;
 }
 @-webkit-keyframes AnimationName {
     0%{background-position:0% 50%}
