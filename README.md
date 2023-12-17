@@ -26,12 +26,17 @@ First you will want to either clone this repo, or download the zip (and unzip it
 
 Next you need to edit `config/db_config.php` and add your SQL credentials.
 
-If you plan on using a custom domain, you can also edit `config/configuation.php` to include that.
-
-Then you will need to navigate to `http://imghost.local/config/` or your custom domain to finish database and folder setup. Simply change the available options based on your preferences and click `Setup databases`, once complete you will be redirected to the home page where your server should be ready to use!
+Then you need to navigate to `http://imghost.local/config/` (or your custom domain) to finish setup. Simply change the available options based on your preferences and click `Setup server`, once complete you will be redirected to the home page where your server should be ready to use. The same web page can be used later to change settings.
 
 
 ## Changelog
+
+### v0.5.0-alpha - Dec 17, 2023
+
+- Big changes to configuration system - values are stored to MySQL and read from there as well
+- Overhauled system settings page - settings are now configurable while the server is running
+- Slightly altered the default background to be more aesthetically pleasing
+- Decided to change to 'alpha' status to more accurately reflect the state of this program - while I strive to make it work as best as possible, it is easy to overlook things that seem like basic features. For example there is a settings page with no password protection.
 
 ### v0.4.0-beta - Dec 16, 2023
 

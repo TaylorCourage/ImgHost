@@ -40,14 +40,17 @@ if (mysqli_num_rows($result) > 0) {
 		}
 	}
 } else {
-	echo "Shit, something broke. Try again! Or if the problem persists contact the system administrator";
+	echo "Shit, something broke. Try again! Maybe there's nothing here? Or if the problem persists after uploading, contact the system administrator or make a new issue on GitHub";
 	?>
     <p>&nbsp;</p>
-    <a href="./">Home</a>
+    <a href="../">Home</a>
     <?php
 }
 
-
+echo '<br>';
+echo '<br>';
+echo '<br>';
+echo '<h6>' . $serverName . " - " . $serverVers . "</h6>";
 echo '</body>';
 echo '</html>';
 ?>

@@ -19,5 +19,7 @@ $sqlPassword = "password";
 // Database Settings
 $dbname = "imghost_data";
 $tablename = "images";
+$settingstable = "settings";
+$authtable = "auth";
 
 ?>
